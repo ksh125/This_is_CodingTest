@@ -21,4 +21,5 @@ for plan in p:
     # 이동
     x, y = nx, ny
 
+# 출력
 print(x, y)

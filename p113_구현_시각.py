@@ -9,4 +9,5 @@ for i in range(h + 1):
             if '3' in str(i) + str(j) + str(k):
                 count += 1
                 
+# 출력    
 print(count)
