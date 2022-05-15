@@ -55,4 +55,4 @@ while True:
             break
         turn_time = 0
 
-print(count)
+print(count) # 결과 출력

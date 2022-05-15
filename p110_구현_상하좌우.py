@@ -21,4 +21,4 @@ for plan in p:
     # 이동
     x, y = nx, ny
 
-print(x, y)
+print(x, y) # 결과 출력

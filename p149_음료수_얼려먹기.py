@@ -31,4 +31,4 @@ for i in range(n):
         if dfs(i, j) == True:
             result += 1
             
-print(result) # 정답 출력
+print(result) # 결과 출력

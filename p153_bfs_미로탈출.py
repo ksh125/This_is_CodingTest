@@ -36,4 +36,4 @@ def bfs(x, y):
     # 가장 오른쪽 아래까지의 최단거리 반환
     return graph[n - 1][m - 1]
 
-print(bfs(0, 0))
+print(bfs(0, 0)) # 결과 출력

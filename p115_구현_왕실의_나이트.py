@@ -16,4 +16,4 @@ for i in move:
     if next_location >= 1 and next_location <= 8 and next_coordinate >= 1 and next_coordinate <= 8:
         result += 1
         
-print(result)
+print(result) # 결과 출력
