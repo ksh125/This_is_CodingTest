@@ -54,6 +54,5 @@ while True:
         else:
             break
         turn_time = 0
-        
-# 출력
+
 print(count)
