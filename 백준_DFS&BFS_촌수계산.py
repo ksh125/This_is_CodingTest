@@ -7,7 +7,7 @@ def bfs(map):
         map = queue.popleft()
         for n in graph[map]:
             if check[n] == 0:
-                check[n] = check[map]+1
+                check[n] = check[map] + 1
                 queue.append(n)
             
 n = int(input())
@@ -17,6 +17,6 @@ for _ in range(int(input())):
     u, v = map(int, input().split())
     graph[u].append(v)
     graph[v].append(u)
-check = [0]*(n+1)
+check = [0] * (n + 1)
 bfs(s)
 print(check[e] if check[e] > 0 else -1)
