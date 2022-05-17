@@ -1,42 +1,33 @@
-from collections import deque
-
-dx = [0, 0, 1, -1]
-dy = [1, -1, 0, 0]
-
-
-def bfs(graph, a, b):
-    n = len(graph)
-    queue = deque()
-    queue.append((a, b))
-    graph[a][b] = 0
-    count = 1
-
-    while queue:
-        x, y = queue.popleft()
-        for i in range(4):
-            nx = x + dx[i]
-            ny = y + dy[i]
-            if nx < 0 or nx >= n or ny < 0 or ny >= n:
-                continue
-            if graph[nx][ny] == 1:
-                graph[nx][ny] = 0
-                queue.append((nx, ny))
-                count += 1
-    return count
-
-
 n = int(input())
 graph = []
-for i in range(n):
-    graph.append(list(map(int, input())))
-
-cnt = []
+for _ in range(n):
+    graph.append(list(map(int,input())))
+ 
+grp = []
+cnt = 0
+dx = [-1,1,0,0] # 상하좌우
+dy = [0,0,-1,1]
+ 
+def dfs(x,y):
+    global cnt
+    if x<0 or x>=n or y<0 or y>=n: # 범위
+        return False
+    
+    if graph[x][y]==1:
+        cnt +=1
+        graph[x][y] = 0
+        for i in range(4):
+            dfs(x+dx[i],y+dy[i])
+        return True
+    
+    
 for i in range(n):
     for j in range(n):
-        if graph[i][j] == 1:
-            cnt.append(bfs(graph, i, j))
-
-cnt.sort()
-print(len(cnt))
-for i in range(len(cnt)):
-    print(cnt[i])
+        if dfs(i,j)==True:
+            grp.append(cnt)
+            cnt = 0
+            
+print(len(grp))
+grp.sort()
+for i in grp:
+    print(i)
