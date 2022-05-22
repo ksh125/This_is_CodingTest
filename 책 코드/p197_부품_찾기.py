@@ -19,6 +19,6 @@ def b_s(arr, t, s, e):
 for i in arr2:
     p = b_s(arr1, 1, 0, n - 1)
     if p != None:
-        print("yes", end=' ')
+        print("yes", end = ' ')
     else:
-        print("no", end=' ')
+        print("no", end = ' ')
