@@ -1,5 +1,4 @@
 n = int(input())
-
 arr1 = list(map(int, input().split()))
 arr1.sort()
 
