@@ -4,4 +4,5 @@ def fib(n):
         x, y = y, x+y
     return x
 
-print(fib(int(input())))
+n = int(input())
+print(fib(n))
